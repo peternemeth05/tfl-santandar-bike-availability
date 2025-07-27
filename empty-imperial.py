@@ -1,7 +1,6 @@
 import requests
 import xml.etree.ElementTree as ET # ElementTree is a builtin py library
 
-from time import time 
 
 def get_station_availability(station_name: str) -> list:
 
@@ -42,21 +41,29 @@ def get_station_availability(station_name: str) -> list:
 
 
 
-if __name__ == "__main__":
 
 
-
-    t1 = time()
-
-    get_station_availability("River Street , Clerkenwell")
-
-    print(f"time for first station data {time()-t1}\n")
-
-    t2 = time()
-
-    get_station_availability("Victoria & Albert Museum, South Kensington")
-
-    print(f"time for last station data {time()-t2}\n")
+hux = get_station_availability("Imperial College, Knightsbridge")
+rsm = get_station_availability("Prince Consort Road, Knightsbridge")
+entrance = get_station_availability("Exhibition Road, Knightsbridge")
+gloucester_road = get_station_availability("Gloucester Road (Central), South Kensington")
+joe = get_station_availability("Gloucester Road (North), Kensington")
 
 
-    pass
+if hux[1] == rsm[1] == entrance[1] == 0: # if the number of empty docks equals 0
+    print("There are no bike stations avaliable near Imperial Campus\n")
+
+    if gloucester_road[1] != 0 and joe[1] != 0:
+        print(f"\nThere are {gloucester_road[1]} empty docks on gloucester road, and {joe[1]} empty docks by Joe and The Juice\n")
+
+if hux[1] != 0:
+    print(f"\nHuxley bike station has {hux[1]} empty docks!\n")
+
+if rsm[1] != 0:
+    print(f"\nRSM bike station has {rsm[1]} empty docks!\n")
+
+if entrance[1] != 0:
+    print(f"\nMain entrance bike station has {entrance[1]} empty docks!\n")
+        
+
+
