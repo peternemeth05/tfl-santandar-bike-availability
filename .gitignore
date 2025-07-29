@@ -1,0 +1,12 @@
+
+# python files
+home.py
+empty-home.py
+
+# Python Virtual Environments
+/venv/
+venv/
+
+# Python Cache
+__pycache__/
+*.pyc

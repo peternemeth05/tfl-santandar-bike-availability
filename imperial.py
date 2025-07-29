@@ -52,7 +52,7 @@ joe = get_station_availability("Gloucester Road (North), Kensington")
 if hux[0] == rsm[0] == entrance[0] == 0: # if the number of empty docks equals 0
     print("There are no bikes avaliable near Imperial Campus\n")
 
-    if gloucester_road[1] != 0 and joe[1] != 0:
+    if gloucester_road[0] != 0 and joe[0] != 0:
         print(f"\nThere are {gloucester_road[0]} bikes and {gloucester_road[2]} ebikes on gloucester road, and {joe[0]} bikes {joe[2]} ebikes  by Joe and The Juice\n")
 
 if hux[0] != 0:
