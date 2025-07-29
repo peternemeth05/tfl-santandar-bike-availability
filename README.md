@@ -4,6 +4,8 @@
 
 This project is a simple but powerful automation that allows you to ask Siri for the real-time availability of Santander Cycles, specifically for Imperial. It uses a Python script, hosted on an iPhone, to fetch live data from the Transport for London (TfL) feed and provides an immediate, spoken response.
 
+It contains two scripts that are hard-coded to detect the bike availability and empty dock availability at the Huxely, RSM, and main entrance to Imperial College London.
+
 
 ---
 
@@ -21,7 +23,7 @@ This project is a simple but powerful automation that allows you to ask Siri for
 
 * **Hands-Free Activation:** Get bike availability just by asking Siri.
 * **Real-Time Data:** Fetches live data directly from TfL's feed, which updates every minute.
-* **Specific & Focused:** Reports the number of available bikes and empty docks for one designated station.
+* **Specific & Focused:** Reports the number of available bikes/e-bikes or empty docks for stations near Imperial.
 * **Voice Feedback:** Siri reads the results aloud, making it perfect for when you're on the go.
 
 ---
@@ -81,8 +83,18 @@ There are two files, empty-imperial
 
 To run the project, simply activate Siri and say the name of your shortcut.
 
-> "Hey Siri, Check Uni Bikes"
+> "Hey Siri, imperial"
 
 Siri will then execute the script and reply with:
 
-> "At [Your Station Name], there are X bikes and Y empty docks available."
+> "Huxley bike station has 1 bikes with 1 being ebikes!"
+> "RSM bike station has 1 bikes with 0 being ebikes!"
+> "Main entrance bike station has 0 bikes with 0 being ebikes!"
+
+Or checking how empty the bike docks are:
+
+> "Hey Siri, empty imperial"
+
+> "Huxley bike station has 19 empty docks!"
+> "RSM bike station has 17 empty docks!"
+> "Main entrance bike station has 19 empty docks!"
